@@ -17,6 +17,7 @@ class Processo:
 
     def atualizar_estado(self, novo_estado):
         print(f"{self.pid} {self.estado} >>> {novo_estado}")
+        time.sleep(2)
         self.estado = novo_estado
         if novo_estado == "EXECUTANDO":
             self.n_cpu += 1 
@@ -60,6 +61,7 @@ def simular():
 
                 if processo.tp >= processo.tempo_total_execucao:
                     print(f"Processo {processo.pid} terminou. Dados finais: {processo}")
+                    time.sleep(2)
                     processo.estado = "FINALIZADO"
                     processos_finalizados += 1
                 elif processo.estado == "EXECUTANDO":
