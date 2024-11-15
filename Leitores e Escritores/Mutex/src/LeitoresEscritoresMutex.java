@@ -79,7 +79,7 @@ public class LeitoresEscritoresMutex {
             while (true) {
                 recurso.iniciarLeitura(id);
                 try {
-                    Thread.sleep((long) (Math.random() * 1000)); // Simula tempo de leitura
+                    Thread.sleep((long) (Math.random() * 1000));
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
