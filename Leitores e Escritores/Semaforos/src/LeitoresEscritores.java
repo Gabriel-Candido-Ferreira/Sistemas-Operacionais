@@ -52,7 +52,7 @@ public class LeitoresEscritores {
             try {
                 db.acquire();
                 System.out.println("Escritor " + id + " está escrevendo no recurso compartilhado.");
-                Thread.sleep((long) (Math.random() * 1000)); // Simula tempo de escrita
+                Thread.sleep((long) (Math.random() * 1000)); 
                 System.out.println("Escritor " + id + " terminou de escrever.");
                 db.release();
             } catch (InterruptedException e) {
